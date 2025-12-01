@@ -93,7 +93,7 @@ def query_groq(prompt: str, api_key: str) -> str:
     try:
         client = Groq(api_key=api_key)
         completion = client.chat.completions.create(
-            # UPDATED MODEL HERE:
+
             model="llama-3.3-70b-versatile",
             messages=[{"role": "user", "content": prompt}],
             temperature=0,
