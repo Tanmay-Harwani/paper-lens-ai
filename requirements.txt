@@ -1,0 +1,8 @@
+streamlit
+pandas
+pymupdf
+pdf2image
+pytesseract
+duckduckgo-search
+openpyxl
+groq
