@@ -86,7 +86,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-
 def query_groq(prompt: str, api_key: str) -> str:
     if not api_key:
         return ""
@@ -94,7 +93,8 @@ def query_groq(prompt: str, api_key: str) -> str:
     try:
         client = Groq(api_key=api_key)
         completion = client.chat.completions.create(
-            model="mixtral-8x7b-32768",
+            # UPDATED MODEL HERE:
+            model="llama-3.3-70b-versatile",
             messages=[{"role": "user", "content": prompt}],
             temperature=0,
             stream=False,
